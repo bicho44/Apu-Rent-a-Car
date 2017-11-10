@@ -14,7 +14,7 @@ function load_external_jQuery() {
 	wp_deregister_script( 'jquery' );
 
 // Check to make sure Google's library is available
-	$link = 'http://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js';
+	$link = 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js';
 	$try_url = @fopen($link,'r');
 	if( $try_url !== false ) {
 		// If it's available, get it registered
@@ -45,8 +45,6 @@ function imgdigital_scripts() {
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
-
-    wp_enqueue_style( 'imgd-google-fonts', '//fonts.googleapis.com/css?family=Hind:300|Lato|Montserrat:400,700', false ); 
 
 	wp_enqueue_style( 'imgdigital-style', get_template_directory_uri()."/assets/css/style.css");
 
@@ -91,7 +89,7 @@ function imgd_theme_add_editor_styles() {
 add_action( 'admin_init', 'imgd_theme_add_editor_styles' );
 
 function imgd_theme_add_font_editor_styles() {
-    $font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700');//fonts.googleapis.com/css?family=Open:400,700,900'' );
+    $font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Hind:300|Lato|Montserrat:400,700');//fonts.googleapis.com/css?family=Open:400,700,900'' );
     add_editor_style( $font_url );
 
     /*$font_url2 = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Open+Sans:400,300,600' );
@@ -120,6 +118,7 @@ function if_mobile_get_me_this_class($class='', $echo='false'){
  *
  * @package: IMGD Framework
  */
+require get_template_directory() . '/imgd/imgd_fonts.php';
 require get_template_directory() . '/imgd/imgd_images_sizes.php';
 require get_template_directory() . '/imgd/imgd_gallery.php';
 require get_template_directory() . '/imgd/imgd_nav.php';
@@ -137,12 +136,7 @@ require get_template_directory() . '/imgd/imgd_settings.php';
 require get_template_directory() . '/imgd/imgd_shortcode.php';
 require get_template_directory() . '/imgd/imgd_jetpack_mods.php';
 
-/* Google Fonts */
-function wpb_add_google_fonts() {
-	wp_enqueue_style( 'wpb-google-fonts', '//fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700', false );
-}
 
-//add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
 
 
 /**
