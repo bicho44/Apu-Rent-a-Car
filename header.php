@@ -32,7 +32,7 @@
 					rel="home">
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.png"
 					alt="<?php esc_attr(bloginfo('name')); ?>"
-					height="60px">
+					height="100px">
 				</a>
 			</div>
 			<div class="sidebar-top col-md-8">

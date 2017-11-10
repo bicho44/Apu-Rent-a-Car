@@ -1962,10 +1962,10 @@ a .icon-flip-vertical:before {
   position: relative;
 }
 #menu-social ul li a {
-  color: #fff;
+  color: #333333;
 }
 #menu-social ul li a:hover {
-  color: #7f7f7f;
+  color: #000000;
 }
 #menu-social li a::before {
   content: '\f408';
@@ -1977,7 +1977,7 @@ a .icon-flip-vertical:before {
   -webkit-font-smoothing: antialiased;
 }
 #menu-social li a::before:hover {
-  color: #b3b3b3;
+  color: #000000;
 }
 #barra-social ul li:hover {
   background-color: transparent;
@@ -10034,6 +10034,7 @@ animation:         KEYFRAME-NAME 5s infinite;
 .site-header .brand::before {
   z-index: 1000;
   background-color: #fff;
+  display: inline;
   width: 0;
   height: 0;
   border-top: 100px solid #D23F26;
@@ -10045,7 +10046,8 @@ animation:         KEYFRAME-NAME 5s infinite;
 }
 .navbar {
   margin-bottom: 0;
-  margin-left: 100px;
+  margin-left: 150px;
+  font-family: 'Montserrat', sans-serif;
 }
 .navbar-default,
 .navbar-fixed-top {
@@ -10325,21 +10327,21 @@ fieldset[disabled] a.more-link {
   font-weight: bold;
 }
 .wrapfooter {
-  background-color: #333333;
+  background-color: #fff;
   padding: 20px 0;
   border-top: 2px solid #777777;
-  color: #fff;
+  color: #333333;
   margin-top: 20px;
 }
 .wrapfooter h2 {
-  color: #808080;
+  color: #000000;
 }
 .wrapfooter .site-footer ul {
   padding-left: 0;
   list-style: none;
 }
 .wrapfooter .site-footer a {
-  color: #fff;
+  color: #333333;
 }
 .wrapfooter .site-footer .site-info {
   text-align: center;
